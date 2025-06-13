@@ -1,6 +1,6 @@
 .hero-container {
   position: relative;
-  height: 100vh; /* Full viewport height */
+  height: calc(100vh - 80px); /* Full viewport height minus KeyPointers height */
   width: 100%;
   margin-top: -80px; /* Offset the body padding */
 }
