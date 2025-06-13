@@ -1,0 +1,261 @@
+.products-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.products-menu {
+  width: 90%;
+  max-width: 1200px;
+  max-height: 85vh;
+  background: white;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: #374151;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.products-menu-content {
+  display: flex;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.menu-left,
+.menu-middle {
+  width: 20%;
+  padding: 2rem;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  background: #f8fafc;
+}
+
+.menu-right {
+  width: 60%;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.menu-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.categories-list,
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-button,
+.product-button {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  white-space: normal;
+}
+
+.category-button:hover,
+.product-button:hover {
+  background: #f3f4f6;
+  color: var(--primary-color);
+}
+
+.category-button.active,
+.product-button.active {
+  background: #f3f4f6;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.preview-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.preview-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.preview-image {
+  object-fit: cover;
+}
+
+.preview-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.preview-description {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.key-features {
+  margin-top: 1.5rem;
+}
+
+.features-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.feature-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.know-more-button {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 24px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.know-more-button:hover {
+  background-color: #4eb598;
+}
+
+.know-more-button:active {
+  transform: scale(0.98);
+}
+
+/* Custom scrollbar */
+.menu-left::-webkit-scrollbar,
+.menu-middle::-webkit-scrollbar,
+.menu-right::-webkit-scrollbar {
+  width: 4px;
+}
+
+.menu-left::-webkit-scrollbar-track,
+.menu-middle::-webkit-scrollbar-track,
+.menu-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.menu-left::-webkit-scrollbar-thumb,
+.menu-middle::-webkit-scrollbar-thumb,
+.menu-right::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-menu {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .preview-image-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-menu-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .menu-left,
+  .menu-middle,
+  .menu-right {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    max-height: 300px;
+  }
+
+  .menu-right {
+    border-bottom: none;
+  }
+
+  .preview-image-container {
+    height: 200px;
+  }
+}

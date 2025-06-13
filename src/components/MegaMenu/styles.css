@@ -1,0 +1,243 @@
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.mega-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: transparent;
+}
+
+/* Main Categories (20%) */
+.main-categories {
+  width: 20%;
+  border-right: 1px solid rgba(229, 231, 235, 0.4);
+  padding-right: 1.5rem;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.category-item {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4b5563;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.category-item:hover,
+.category-item.active {
+  background-color: rgba(243, 244, 246, 0.7);
+  color: var(--primary-color);
+}
+
+/* Subcategories (20%) */
+.subcategories {
+  width: 20%;
+  border-right: 1px solid rgba(229, 231, 235, 0.4);
+  padding-right: 1.5rem;
+}
+
+.subcategory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subcategory-item {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4b5563;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.subcategory-item:hover,
+.subcategory-item.active {
+  background-color: rgba(243, 244, 246, 0.7);
+  color: var(--primary-color);
+}
+
+/* Preview Content (60%) */
+.preview-content {
+  width: 60%;
+  padding-left: 1.5rem;
+}
+
+.preview-header {
+  margin-bottom: 1.5rem;
+}
+
+.preview-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.preview-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.preview-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.preview-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: rgba(243, 244, 246, 0.5);
+}
+
+.preview-image-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-specs {
+  background: linear-gradient(to bottom right, rgba(240, 249, 255, 0.3), rgba(255, 255, 255, 0.5));
+  padding: 1rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(5px);
+}
+
+.preview-specs-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #075985;
+  margin-bottom: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.preview-specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.preview-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.preview-spec-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.preview-spec-text {
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .mega-menu-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .main-categories,
+  .subcategories,
+  .preview-content {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.4);
+    padding: 0 0 1.5rem 0;
+  }
+
+  .preview-content {
+    border-bottom: none;
+    padding-top: 1.5rem;
+  }
+
+  .preview-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    position: relative;
+    height: auto;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .mega-menu-container {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .category-item,
+  .subcategory-item {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .category-item:hover,
+  .category-item.active,
+  .subcategory-item:hover,
+  .subcategory-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .preview-image {
+    height: 150px;
+  }
+
+  .preview-title,
+  .preview-description,
+  .preview-specs-title,
+  .preview-spec-text {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}

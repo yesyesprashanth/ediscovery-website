@@ -16,16 +16,23 @@ const StatsCard = () => {
       paddingTop: '20px',
       paddingBottom: '20px'
     }}>
-      <div className="bg-[#66CDAA] rounded-lg p-8 flex justify-between">
-        {/* 25+ Years Experience Section - 40% width */}
-        <div className="flex items-center relative" style={{ width: '40%' }}>
+      <div className="bg-[#66CDAA] rounded-lg p-8 flex justify-between items-start">
+        {/* Years Experience Section - 40% width */}
+        <div className="flex items-start relative" style={{ width: '40%' }}>
           <div className="text-center w-full">
-            <h3 className="text-4xl font-bold text-white">25+</h3>
+            <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>15+</h3>
             <p className="text-white/90">Years experience working.</p>
           </div>
           
           {/* Vertical divider line */}
-          <div className="absolute right-0 h-full w-[2px] bg-white"></div>
+          <div style={{ 
+            position: 'absolute',
+            right: -35,
+            height: '80%',
+            width: '2px',
+            backgroundColor: 'white',
+            top: '10%'
+          }}></div>
         </div>
         
         {/* Spacer div for padding */}
@@ -33,7 +40,7 @@ const StatsCard = () => {
         
         {/* Happy Client Section - 20% width */}
         <div className="text-center" style={{ width: '25%' }}>
-          <h3 className="text-4xl font-bold text-white">51 K+</h3>
+          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>1.2K</h3>
           <p className="text-white/90">Happy Client</p>
         </div>
 
@@ -42,7 +49,7 @@ const StatsCard = () => {
         
         {/* Principals Section - 20% width */}
         <div className="text-center" style={{ width: '15%' }}>
-          <h3 className="text-4xl font-bold text-white">6+</h3>
+          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>5+</h3>
           <p className="text-white/90">Principals</p>
         </div>
 
@@ -51,7 +58,7 @@ const StatsCard = () => {
         
         {/* Client Reviews Section - 20% width */}
         <div className="text-center" style={{ width: '25%' }}>
-          <h3 className="text-4xl font-bold text-white">4.7</h3>
+          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>4.7</h3>
           <p className="text-white/90">Client Reviews</p>
         </div>
       </div>

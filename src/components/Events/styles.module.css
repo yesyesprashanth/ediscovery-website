@@ -1,0 +1,114 @@
+.eventsSection {
+  padding: 6rem 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 3rem;
+}
+
+.tableContainer {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.eventsTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.eventsTable th {
+  background-color: #66CDAA;
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.eventsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.eventsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.location {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+.time {
+  font-size: 0.875rem;
+  color: #0ea5e9;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.boothNo {
+  font-weight: 600;
+  color: #0ea5e9;
+  text-align: center;
+}
+
+.date {
+  color: #334155;
+  white-space: nowrap;
+}
+
+.eventsTable tr:hover {
+  background-color: #f8fafc;
+}
+
+.upcomingEvent {
+  background-color: #f0fdf4;
+}
+
+.pastEvent {
+  color: #64748b;
+}
+
+.pastEvent strong {
+  color: #475569;
+}
+
+.pastEvent .boothNo {
+  color: #64748b;
+}
+
+.pastEvent .date {
+  color: #64748b;
+}
+
+.eventLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.eventLink:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}

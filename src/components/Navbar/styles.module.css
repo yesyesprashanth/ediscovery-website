@@ -1,0 +1,359 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparent;
+  padding: 1.5rem 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 80px;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.productPage {
+  background-color: #111827;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbarContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 101;
+}
+
+.navbarLogo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  letter-spacing: 0.025em;
+  opacity: 0.9;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navLink:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #66CDAA;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.navLink:hover {
+  opacity: 1;
+  color: #66CDAA;
+}
+
+.navLink:hover:after,
+.active:after {
+  width: 100%;
+}
+
+.active {
+  color: #66CDAA;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.menuContainer {
+  position: relative;
+}
+
+.menuDropdown {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  z-index: 102;
+}
+
+.menuContainer:hover .menuDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-0.5rem);
+}
+
+.menuItem {
+  position: relative;
+  width: 100%;
+}
+
+.menuItemContent {
+  padding: 0.75rem 1rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.menuItemContent:hover {
+  background: #f8f9fa;
+  color: #66CDAA;
+}
+
+.menuItemContent span {
+  opacity: 0.5;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover .menuItemContent span {
+  opacity: 1;
+  transform: translateX(4px);
+  color: #66CDAA;
+}
+
+.submenuDropdown {
+  position: absolute;
+  left: calc(100% + 0.5rem);
+  top: 0;
+  background: white;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  z-index: 103;
+}
+
+.menuItem:hover .submenuDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0.5rem);
+}
+
+.submenuDropdown a {
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.submenuDropdown a:hover {
+  background: #f8f9fa;
+  color: #66CDAA;
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+
+.contactNumber {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+.contactNumber span {
+  padding-left: 10px;
+}
+
+.contactNumber:hover {
+  opacity: 1;
+}
+
+.enquireButton {
+  background-color: #66CDAA;
+  color: white;
+  padding: 0.85rem 2.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.enquireButton:hover {
+  background-color: #53b491;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(102, 205, 170, 0.4);
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+@media (max-width: 1024px) {
+  .navbarLinks {
+    gap: 1.5rem;
+  }
+
+  .navButtons {
+    gap: 1rem;
+  }
+
+  .contactNumber {
+    display: none;
+  }
+}
+
+.newBadge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #66CDAA;
+  color: black;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .navbarLinks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 5rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .navbarLinks.active {
+    display: flex;
+  }
+
+  .menuContainer {
+    width: 100%;
+  }
+
+  .menuDropdown,
+  .submenuDropdown {
+    position: static;
+    transform: none;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .menuContainer:hover .menuDropdown {
+    transform: none;
+  }
+
+  .menuItem:hover .submenuDropdown {
+    transform: none;
+  }
+
+  .menuItemContent,
+  .submenuDropdown a {
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+  }
+
+  .enquireButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

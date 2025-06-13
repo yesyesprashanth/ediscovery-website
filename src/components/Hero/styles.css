@@ -1,7 +1,8 @@
 .hero-container {
   position: relative;
-  height: calc(100vh - 80px); /* subtract the height of key-pointers */
+  height: 100vh; /* Full viewport height */
   width: 100%;
+  margin-top: -80px; /* Offset the body padding */
 }
 
 .hero-image-container {

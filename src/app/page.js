@@ -2,17 +2,17 @@ import Hero from "../components/Hero";
 import KeyPointers from "../components/KeyPointers";
 import AboutUs from "../components/AboutUs";
 import VisionMission from "../components/VisionMission";
-import Products from "../components/Products";
+import Principals from "../components/Principals";
+// import Products from "../components/Products"; // Commented out old products component
+import Events from "../components/Events";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <div>
-      <div id="home">
+      <div id="home" style={{ position: 'relative' }}>
         <Hero />
-      </div>
-      <div id="key-features">
         <KeyPointers />
       </div>
       <div id="about">
@@ -21,8 +21,11 @@ export default function Home() {
       <div id="vision-mission">
         <VisionMission />
       </div>
-      <div id="products">
-        <Products />
+      <div id="principals">
+        <Principals />
+      </div>
+      <div id="news">
+        <Events />
       </div>
       <div id="testimonials">
         <Testimonials />

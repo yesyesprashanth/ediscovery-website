@@ -5,14 +5,15 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaClock,
-  FaLinkedin,
-  FaTwitter,
-  FaFacebook,
-  FaYoutube
+  FaLinkedin
 } from 'react-icons/fa';
+import CareerForm from '../CareerForm';
+import { useState } from 'react';
 import './styles.css';
 
 const Footer = () => {
+  const [isCareerFormOpen, setIsCareerFormOpen] = useState(false);
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -30,7 +31,11 @@ const Footer = () => {
               className="career-link" 
               onClick={(e) => {
                 e.preventDefault();
-                // Popup functionality will be implemented later
+                window.scrollTo({
+                  top: window.innerHeight * 0.10,
+                  behavior: 'smooth'
+                });
+                setTimeout(() => setIsCareerFormOpen(true), 300);
               }}
               style={{
                 display: 'inline-block',
@@ -108,10 +113,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="social-links">
               {[
-                { Icon: FaLinkedin, url: 'https://linkedin.com' },
-                { Icon: FaTwitter, url: 'https://twitter.com' },
-                { Icon: FaFacebook, url: 'https://facebook.com' },
-                { Icon: FaYoutube, url: 'https://youtube.com' }
+                { Icon: FaLinkedin, url: 'https://www.linkedin.com/company/ediscovery-automation/?viewAsMember=true' }
               ].map(({ Icon, url }, index) => (
                 <a
                   key={index}
@@ -132,6 +134,7 @@ const Footer = () => {
           Copyright Reserved @ eDiscovery Automation Pvt ltd
         </div>
       </div>
+      <CareerForm isOpen={isCareerFormOpen} onClose={() => setIsCareerFormOpen(false)} />
     </footer>
   );
 };

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { productsData } from '@/data/products';
-import './styles.css';
+import styles from './styles.module.css';
 
 const Products = () => {
   const [selectedPrincipal, setSelectedPrincipal] = useState(Object.keys(productsData)[0]);
