@@ -1,119 +1,74 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { testimonialsData } from '@/data/testimonials';
+import { motion } from 'framer-motion';
 import './styles.css';
 
+const customerLogos = [
+  { name: 'AgroTech', src: '/assets/testimonials/logos/AgroTech.png' },
+  { name: 'CTRI', src: '/assets/testimonials/logos/CTRI.png' },
+  { name: 'Coramondal', src: '/assets/testimonials/logos/Coramondal.png' },
+  { name: 'Dr Reddys', src: '/assets/testimonials/logos/DrReddys.png' },
+  { name: 'Ecolabs', src: '/assets/testimonials/logos/Ecolabs.png' },
+  { name: 'Gland', src: '/assets/testimonials/logos/Gland.png' },
+  { name: 'Godfrey', src: '/assets/testimonials/logos/Godfrey.png' },
+  { name: 'Himalaya', src: '/assets/testimonials/logos/Himalaya.png' },
+  { name: 'IIT Kanpur', src: '/assets/testimonials/logos/IIT_Kanpur.png' },
+  { name: 'ITC', src: '/assets/testimonials/logos/ITC.png' },
+  { name: 'Johnson', src: '/assets/testimonials/logos/Johnson.png' },
+  { name: 'MFL', src: '/assets/testimonials/logos/MFL.png' },
+  { name: 'PRL', src: '/assets/testimonials/logos/PRL.png' },
+  { name: 'Piramal', src: '/assets/testimonials/logos/Piramal.png' },
+  { name: 'RRI', src: '/assets/testimonials/logos/RRI.png' },
+  { name: 'Surya', src: '/assets/testimonials/logos/Surya.png' },
+  { name: 'TAPI', src: '/assets/testimonials/logos/TAPI.png' },
+  { name: 'Cipla', src: '/assets/testimonials/logos/cipla.png' },
+  { name: 'NCPOR', src: '/assets/testimonials/logos/ncpor.png' },
+  { name: 'NRI', src: '/assets/testimonials/logos/nri.png' }
+];
+
 const Testimonials = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const slideVariants = {
-    enter: (direction) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction) => ({
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0
-    })
-  };
-
-  const navigate = (newDirection) => {
-    setDirection(newDirection);
-    setCurrentTestimonial((prev) => 
-      (prev + newDirection + testimonialsData.clients.length) % testimonialsData.clients.length
-    );
-  };
-
-  // Auto-advance testimonials
-  useEffect(() => {
-    const timer = setInterval(() => {
-      navigate(1);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section className="testimonials-section">
+    <section id="testimonials" className="testimonials-section">
       <div className="testimonials-container">
         <motion.div
           className="testimonials-header"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="testimonials-title">What Our Clients Say</h2>
-          <p className="testimonials-subtitle">
-            Discover how our solutions are making a difference in laboratories across India
-          </p>
+          <h2>Our Customer</h2>
+          <p>Trusted by leading companies across industries</p>
         </motion.div>
 
-        <div className="testimonial-slider">
-          <AnimatePresence initial={false} custom={direction}>
+        <motion.div 
+          className="customer-logos-grid"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {customerLogos.map((logo, index) => (
             <motion.div
-              key={currentTestimonial}
-              className="testimonial-card"
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 }
-              }}
+              key={logo.name}
+              className="logo-container"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <FaQuoteLeft className="quote-icon" />
-              <p className="testimonial-text">
-                {testimonialsData.clients[currentTestimonial].testimony}
-              </p>
-              <div className="testimonial-author">
-                <h4 className="author-name">{testimonialsData.clients[currentTestimonial].name}</h4>
-                <p className="author-title">
-                  {testimonialsData.clients[currentTestimonial].designation} at {testimonialsData.clients[currentTestimonial].company}
-                </p>
-                <div className="company-logo">
-                  <Image
-                    src={testimonialsData.clients[currentTestimonial].logo}
-                    alt={testimonialsData.clients[currentTestimonial].company}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
+              <Image
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={150}
+                height={80}
+                className="customer-logo"
+                style={{ objectFit: 'contain' }}
+              />
             </motion.div>
-          </AnimatePresence>
-
-          <div className="navigation-buttons">
-            <motion.button
-              className="nav-button"
-              onClick={() => navigate(-1)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaArrowLeft />
-            </motion.button>
-            <motion.button
-              className="nav-button"
-              onClick={() => navigate(1)}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaArrowRight />
-            </motion.button>
-          </div>
-        </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

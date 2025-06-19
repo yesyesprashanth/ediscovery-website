@@ -1,26 +1,27 @@
 .products-menu-overlay {
   position: fixed;
-  top: 0;
+  top: 80px; /* Match your navbar height */
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
   backdrop-filter: blur(8px);
 }
 
 .products-menu {
   width: 90%;
   max-width: 1200px;
-  max-height: 85vh;
+  max-height: calc(85vh - 80px);
   background: white;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  margin-top: 0; /* Remove any gap */
 }
 
 .close-button {

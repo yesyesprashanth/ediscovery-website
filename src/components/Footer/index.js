@@ -15,14 +15,14 @@ const Footer = () => {
   const [isCareerFormOpen, setIsCareerFormOpen] = useState(false);
 
   return (
-    <footer className="footer">
+    <footer id="contact" className="footer">
       <div className="footer-container">
         <div className="footer-content">
           {/* Left Section - Company Info */}
           <div className="company-info">
-            <h2 className="company-name">eDiscovery Automation</h2>
+            <h2 className="company-name">eDiscovery Automation Pvt Ltd</h2>
             <p className="company-description">
-              eDiscovery Automation is a leading provider of innovative laboratory automation solutions. 
+              eDiscovery Automation Pvt Ltd is a leading provider of innovative laboratory automation solutions. 
               We specialize in delivering high-quality automated systems and exceptional service to 
               research institutions and industrial laboratories across India.
             </p>

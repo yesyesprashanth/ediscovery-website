@@ -8,16 +8,51 @@ import './styles.css';
 const EnquireForm = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
+    designation: '',
+    mobile: '',
     email: '',
-    product: '',
-    message: ''
+    address: '',
+    productOfInterest: '',
+    additionalInfo: ''
   });
+
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Required field validations
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.designation.trim()) newErrors.designation = 'Designation is required';
+    
+    // Mobile validation
+    if (!formData.mobile.trim()) {
+      newErrors.mobile = 'Mobile number is required';
+    } else if (!/^[0-9]{10}$/.test(formData.mobile.trim())) {
+      newErrors.mobile = 'Please enter a valid 10-digit mobile number';
+    }
+    
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.address.trim()) newErrors.address = 'Address is required';
+    if (!formData.productOfInterest.trim()) newErrors.productOfInterest = 'Product of Interest is required';
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Will implement email sending functionality later
-    console.log('Form submitted:', formData);
-    onClose();
+    if (validateForm()) {
+      // Will implement email sending functionality later
+      console.log('Form submitted:', formData);
+      onClose();
+    }
   };
 
   const handleChange = (e) => {
@@ -26,6 +61,13 @@ const EnquireForm = ({ isOpen, onClose }) => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
   return (
@@ -49,7 +91,7 @@ const EnquireForm = ({ isOpen, onClose }) => {
             
             <form onSubmit={handleSubmit} className="enquire-form">
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -58,11 +100,43 @@ const EnquireForm = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   required
                   placeholder="Your name"
+                  className={errors.name ? 'error' : ''}
                 />
+                {errors.name && <span className="error-message">{errors.name}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="designation">Designation *</label>
+                <input
+                  type="text"
+                  id="designation"
+                  name="designation"
+                  value={formData.designation}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your designation"
+                  className={errors.designation ? 'error' : ''}
+                />
+                {errors.designation && <span className="error-message">{errors.designation}</span>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="mobile">Mobile *</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="mobile"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your mobile number"
+                  className={errors.mobile ? 'error' : ''}
+                />
+                {errors.mobile && <span className="error-message">{errors.mobile}</span>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email *</label>
                 <input
                   type="email"
                   id="email"
@@ -71,38 +145,54 @@ const EnquireForm = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   required
                   placeholder="Your email address"
+                  className={errors.email ? 'error' : ''}
                 />
+                {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="product">Product of Interest</label>
+                <label htmlFor="address">Address *</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  value={formData.address}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your address"
+                  rows="3"
+                  className={errors.address ? 'error' : ''}
+                />
+                {errors.address && <span className="error-message">{errors.address}</span>}
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="productOfInterest">Product of Interest *</label>
                 <input
                   type="text"
-                  id="product"
-                  name="product"
-                  value={formData.product}
+                  id="productOfInterest"
+                  name="productOfInterest"
+                  value={formData.productOfInterest}
                   onChange={handleChange}
                   required
                   placeholder="What product are you interested in?"
+                  className={errors.productOfInterest ? 'error' : ''}
                 />
+                {errors.productOfInterest && <span className="error-message">{errors.productOfInterest}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message</label>
+                <label htmlFor="additionalInfo">Additional Information</label>
                 <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  value={formData.additionalInfo}
                   onChange={handleChange}
-                  required
-                  placeholder="Your message"
+                  placeholder="Any additional information you'd like to share"
                   rows="4"
                 />
               </div>
 
-              <button type="submit" className="submit-button">
-                Send Message
-              </button>
+              <button type="submit" className="submit-button">Submit</button>
             </form>
           </motion.div>
         </>

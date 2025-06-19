@@ -1,6 +1,6 @@
 .key-pointers {
   position: absolute;
-  bottom: 0;
+  bottom: -80px; /* Position it exactly at the end of the hero container */
   left: 0;
   right: 0;
   background-color: white;

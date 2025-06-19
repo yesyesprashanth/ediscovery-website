@@ -4,15 +4,16 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { productsMenu, productDetails } from '@/data/menudata';
+import { productsMenu, productDetails, productUrlMapping } from '@/data/menudata';
 import styles from './styles.module.css';
 
-const ProductsPopup = ({ isOpen, onClose }) => {
+const ProductsPopup = ({ isOpen, onClose, parentRef }) => {
   const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState(Object.keys(productsMenu)[0]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const updatePreview = (product) => {
-    const previewContent = productDetails[product]?.previewContent;
+    // Find preview content in the nested structure using selected category
+    const previewContent = productDetails[selectedCategory]?.[product]?.previewContent;
     if (previewContent) {
       const previewEl = document.querySelector(`.${styles.preview}`);
       if (previewEl) {
@@ -36,23 +37,45 @@ const ProductsPopup = ({ isOpen, onClose }) => {
 
   const handleKnowMore = () => {
     if (selectedProduct) {
-      router.push(`/products/${selectedProduct.toLowerCase().replace(/\s+/g, '-')}`);
+      const urlKey = Object.entries(productUrlMapping).find(([_, name]) => name === selectedProduct)?.[0];
+      if (urlKey) {
+        router.push(`/products/${urlKey}`);
+      }
       onClose();
     }
   };
 
-  const preview = selectedProduct && productDetails[selectedProduct]?.previewContent;
+  const preview = selectedProduct && productDetails[selectedCategory]?.[selectedProduct]?.previewContent;
+
+  // Add hover handlers for the popup
+  const handlePopupMouseEnter = () => {
+    if (parentRef?.current) {
+      const mouseEnterEvent = new MouseEvent('mouseenter', {
+        bubbles: true,
+        cancelable: true,
+      });
+      parentRef.current.dispatchEvent(mouseEnterEvent);
+    }
+  };
+
+  const handlePopupMouseLeave = () => {
+    if (parentRef?.current) {
+      const mouseLeaveEvent = new MouseEvent('mouseleave', {
+        bubbles: true,
+        cancelable: true,
+      });
+      parentRef.current.dispatchEvent(mouseLeaveEvent);
+    }
+  };
 
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           <motion.div
-            className={styles.overlay}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
+            className={styles.productsMenuOverlay}
+            onMouseEnter={handlePopupMouseEnter}
+            onMouseLeave={handlePopupMouseLeave}
           />
           <motion.div
             className={styles.popup}

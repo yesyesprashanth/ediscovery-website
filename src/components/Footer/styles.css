@@ -5,7 +5,7 @@
 }
 
 .footer-container {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   padding: 3rem 0;
 }
@@ -13,7 +13,7 @@
 .footer-content {
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
   position: relative;
 }
 
@@ -30,14 +30,16 @@
 
 .company-info, .contact-info {
   flex: 1;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .company-name {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: white;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
 }
 
 .company-description {

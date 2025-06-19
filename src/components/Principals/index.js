@@ -34,7 +34,7 @@ const principals = [
 
 const Principals = () => {
 	return (
-		<section className={styles.principalsSection}>
+		<section id='principals' className={styles.principalsSection}>
 			<motion.div
 				className={styles.container}
 				initial={{ opacity: 0, y: 20 }}

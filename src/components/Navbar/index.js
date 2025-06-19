@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { FaBars, FaTimes, FaPhone } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import EnquireForm from "../EnquireForm";
 import ProductsPopup from "../ProductsMenu/ProductsPopup";
 import styles from "./styles.module.css";
 import { useRouter, usePathname } from 'next/navigation';
-import { productsMenu, applicationsMenu } from '@/data/menudata';
+import { productsMenu, applicationsMenu, productUrlMapping, solutionUrlMapping } from '@/data/menudata';
 import { eventsData } from '@/data/events';
 
 const Navbar = () => {
@@ -20,8 +20,17 @@ const Navbar = () => {
   const [isEnquireFormOpen, setIsEnquireFormOpen] = useState(false);
   const [isProductsPopupOpen, setIsProductsPopupOpen] = useState(false);
   const [isHoveringProducts, setIsHoveringProducts] = useState(false);
+  const productsButtonRef = useRef(null);
+  
+  const handleProductsMouseEnter = () => {
+    setIsHoveringProducts(true);
+  };
 
-  const isProductPage = pathname.startsWith('/products');
+  const handleProductsMouseLeave = () => {
+    setIsHoveringProducts(false);
+  };
+
+  const isDarkNavbarPage = pathname.startsWith('/products') || pathname.startsWith('/solutions');
 
   useEffect(() => {
     // Check for upcoming events on client-side only
@@ -65,7 +74,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       // Update active section based on scroll position
-      const sections = ["home", "about", "products", "solutions", "news", "testimonials"];
+      const sections = ["home", "about", "principals", "products", "solutions", "news", "testimonials", "contact"];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -151,25 +160,19 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isProductPage ? styles.productPage : ''}`}>
+    <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${isDarkNavbarPage ? styles.productPage : ''}`}>
       <div className={styles.navbarContainer}>
-        <a href="/" onClick={handleLogoClick} className={styles.navbarLogo}>
-          <Image
-            src="/assets/logo.png"
-            alt="eDiscovery Automation"
-            width={202}
-            height={50}
-            style={{ height: '50px', width: 'auto' }}
-          />
-        </a>
-
-        <button
-          className={styles.mobileMenuButton}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
+        <div className={styles.logoSection}>
+          <a href="/" onClick={handleLogoClick} className={styles.navbarLogo}>
+            <Image
+              src="/assets/logo.png"
+              alt="eDiscovery Automation"
+              width={202}
+              height={50}
+              style={{ height: '50px', width: 'auto' }}
+            />
+          </a>
+        </div>
 
         <nav className={`${styles.navbarLinks} ${isMobileMenuOpen ? styles.active : ''}`}>
           <a 
@@ -186,27 +189,44 @@ const Navbar = () => {
           >
             About Us
           </a>
+          <a 
+            href="#principals" 
+            className={`${styles.navLink} ${activeItem === 'principals' ? styles.active : ''}`}
+            onClick={(e) => scrollToSection("principals", e)}
+          >
+            Principals
+          </a>
 
           <div className={styles.menuContainer}>
             <button
-              className={`${styles.navLink} ${activeItem === 'products' ? styles.active : ''}`}
+              ref={productsButtonRef}
+              className={`${styles.navLink} ${styles.productsButton} ${activeItem === 'products' ? styles.active : ''}`}
               aria-haspopup="true"
-              onClick={() => setIsProductsPopupOpen(true)}
-              onMouseEnter={() => setIsHoveringProducts(true)}
-              onMouseLeave={() => setIsHoveringProducts(false)}
+              onClick={(e) => {
+                // Only open popup if clicking directly on the Products button, not its children
+                if (e.target === e.currentTarget) {
+                  setIsProductsPopupOpen(true);
+                }
+              }}
+              onMouseEnter={handleProductsMouseEnter}
+              onMouseLeave={handleProductsMouseLeave}
             >
               Products
               {isHoveringProducts && (
                 <div className={styles.menuDropdown}>
                   {Object.entries(productsMenu).map(([category, { products }]) => (
-                    <div key={category} className={styles.menuItem}>
-                      <div className={styles.menuItemContent}>
+                    <div key={category} className={styles.menuItem} onClick={(e) => e.stopPropagation()}>
+                      <div className={styles.menuItemContent} onClick={(e) => e.stopPropagation()}>
                         {category}
                         <span>→</span>
                       </div>
-                      <div className={styles.submenuDropdown}>
+                      <div className={styles.submenuDropdown} onClick={(e) => e.stopPropagation()}>
                         {products.map(product => (
-                          <a key={product} href={`/products/${product.toLowerCase().replace(/\s+/g, '-')}`}>
+                          <a 
+                            key={product} 
+                            href={`/products/${Object.entries(productUrlMapping).find(([_, name]) => name === product)?.[0] || ''}`}
+                            onClick={(e) => e.stopPropagation()}
+                          >
                             {product}
                           </a>
                         ))}
@@ -232,11 +252,15 @@ const Navbar = () => {
                       <span>→</span>
                     </div>
                     <div className={styles.submenuDropdown}>
-                      {applications.map(app => (
-                        <a key={app} href={`#${app.toLowerCase().replace(/\s+/g, '-')}`}>
-                          {app}
-                        </a>
-                      ))}
+                      {applications.map(app => {
+                        // Convert solution name to URL slug
+                        const urlSlug = app.toLowerCase().replace(/[:\s,]+/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
+                        return (
+                          <a key={app} href={`/solutions/${urlSlug}`}>
+                            {app}
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -258,15 +282,18 @@ const Navbar = () => {
             className={`${styles.navLink} ${activeItem === 'testimonials' ? styles.active : ''}`}
             onClick={(e) => scrollToSection("testimonials", e)}
           >
-            Testimonials
+            Our Customer
+          </a>
+          <a 
+            href="#contact" 
+            className={`${styles.navLink} ${activeItem === 'contact' ? styles.active : ''}`}
+            onClick={(e) => scrollToSection("contact", e)}
+          >
+            Contact Us
           </a>
         </nav>
 
         <div className={styles.navButtons}>
-          <div className={styles.contactNumber}>
-            <FaPhone />
-            <span>+91 96323 11966</span>
-          </div>
           <button
             className={styles.enquireButton}
             onClick={() => setIsEnquireFormOpen(true)}
@@ -274,9 +301,21 @@ const Navbar = () => {
             Enquire Now
           </button>
         </div>
+
+        <button
+          className={styles.mobileMenuButton}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
       <EnquireForm isOpen={isEnquireFormOpen} onClose={() => setIsEnquireFormOpen(false)} />
-      <ProductsPopup isOpen={isProductsPopupOpen} onClose={() => setIsProductsPopupOpen(false)} />
+      <ProductsPopup 
+        isOpen={isProductsPopupOpen} 
+        onClose={() => setIsProductsPopupOpen(false)}
+        parentRef={productsButtonRef}
+      />
     </header>
   );
 };

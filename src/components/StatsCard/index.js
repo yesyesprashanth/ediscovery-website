@@ -17,11 +17,11 @@ const StatsCard = () => {
       paddingBottom: '20px'
     }}>
       <div className="bg-[#66CDAA] rounded-lg p-8 flex justify-between items-start">
-        {/* Years Experience Section - 40% width */}
-        <div className="flex items-start relative" style={{ width: '40%' }}>
+        {/* Years Experience Section - 45% width */}
+        <div className="flex items-start relative" style={{ width: '45%' }}>
           <div className="text-center w-full">
-            <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>15+</h3>
-            <p className="text-white/90">Years experience working.</p>
+            <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>25+</h3>
+            <p className="text-white/90 whitespace-nowrap">Years experience working.</p>
           </div>
           
           {/* Vertical divider line */}
@@ -36,27 +36,18 @@ const StatsCard = () => {
         </div>
         
         {/* Spacer div for padding */}
-        <div style={{ width: '100px' }}></div>
+        <div style={{ width: '80px' }}></div>
         
-        {/* Happy Client Section - 20% width */}
+        {/* Happy Client Section - 25% width */}
         <div className="text-center" style={{ width: '25%' }}>
-          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>1.2K</h3>
+          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>500+</h3>
           <p className="text-white/90">Happy Client</p>
         </div>
 
-        {/* Spacer div after Happy Client */}
-        <div style={{ width: '50px' }}></div>
+        {/* Spacer div */}
+        <div style={{ width: '80px' }}></div>
         
-        {/* Principals Section - 20% width */}
-        <div className="text-center" style={{ width: '15%' }}>
-          <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>5+</h3>
-          <p className="text-white/90">Principals</p>
-        </div>
-
-        {/* Spacer div after Principals */}
-        <div style={{ width: '50px' }}></div>
-        
-        {/* Client Reviews Section - 20% width */}
+        {/* Client Reviews Section - 25% width */}
         <div className="text-center" style={{ width: '25%' }}>
           <h3 className="text-4xl font-bold text-white" style={{ textAlign: 'center', lineHeight: '1', marginBottom: '0.5rem' }}>4.7</h3>
           <p className="text-white/90">Client Reviews</p>

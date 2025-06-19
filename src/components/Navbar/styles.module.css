@@ -27,8 +27,13 @@
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 2rem;
+}
+
+.logoSection {
+  width: 202px; /* Match the logo width */
 }
 
 .navbarLogo {
@@ -45,9 +50,10 @@
 
 .navbarLinks {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .navLink {
@@ -104,106 +110,79 @@
 
 .menuDropdown {
   position: absolute;
-  top: calc(100% + 1rem);
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100%;
+  left: 0;
+  min-width: 250px;
   background: white;
-  min-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  z-index: 50;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 0.75rem;
-  transition: all 0.3s ease;
-  z-index: 102;
+  transition: all 0.2s ease;
 }
 
 .menuContainer:hover .menuDropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(-0.5rem);
 }
 
 .menuItem {
   position: relative;
-  width: 100%;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .menuItemContent {
-  padding: 0.75rem 1rem;
-  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-}
-
-.menuItemContent:hover {
-  background: #f8f9fa;
-  color: #66CDAA;
-}
-
-.menuItemContent span {
-  opacity: 0.5;
-  font-size: 1.1rem;
-  transition: transform 0.3s ease;
-}
-
-.menuItem:hover .menuItemContent span {
-  opacity: 1;
-  transform: translateX(4px);
-  color: #66CDAA;
+  color: #374151;
+  font-size: 0.875rem;
 }
 
 .submenuDropdown {
   position: absolute;
-  left: calc(100% + 0.5rem);
   top: 0;
+  left: 100%;
+  min-width: 200px;
   background: white;
-  min-width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
   opacity: 0;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  padding: 0.75rem;
-  transition: all 0.3s ease;
-  z-index: 103;
+  transition: all 0.2s ease;
 }
 
 .menuItem:hover .submenuDropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateX(0.5rem);
 }
 
 .submenuDropdown a {
-  padding: 0.75rem 1rem;
-  color: #333;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #374151;
   text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
 }
 
 .submenuDropdown a:hover {
-  background: #f8f9fa;
-  color: #66CDAA;
-  opacity: 1;
-  transform: translateX(4px);
+  background: #f3f4f6;
+  color: #1e40af;
+}
+
+/* Prevent popup from showing on hover */
+.productsButton:hover + .products-menu-overlay {
+  display: none !important;
 }
 
 .navButtons {
+  width: 202px; /* Match the logo width for balance */
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
   justify-content: flex-end;
 }
 
@@ -228,22 +207,18 @@
 
 .enquireButton {
   background-color: #66CDAA;
-  color: white;
-  padding: 0.85rem 2.5rem;
-  border: none;
+  color: black;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   font-weight: 500;
-  cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
   white-space: nowrap;
-  font-size: 1rem;
-  letter-spacing: 0.025em;
 }
 
 .enquireButton:hover {
-  background-color: #53b491;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px -3px rgba(102, 205, 170, 0.4);
+  background-color: #4fa88a;
 }
 
 .mobileMenuButton {
@@ -256,17 +231,48 @@
   z-index: 101;
 }
 
+.navItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.productsButton {
+  position: relative;
+}
+
+.productsButton::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+}
+
+/* Adding a connecting area between button and menu */
+.menuConnector {
+  position: fixed;
+  top: 80px; /* Adjust based on your navbar height */
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  z-index: 999;
+}
+
 @media (max-width: 1024px) {
+  .navbarContainer {
+    gap: 1rem;
+  }
+  
   .navbarLinks {
     gap: 1.5rem;
   }
-
+  
+  .logoSection,
   .navButtons {
-    gap: 1rem;
-  }
-
-  .contactNumber {
-    display: none;
+    width: auto;
   }
 }
 
@@ -300,25 +306,28 @@
     display: block;
   }
 
+  .navbarContainer {
+    grid-template-columns: auto auto;
+  }
+  
   .navbarLinks {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 5rem 2rem 2rem;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 100;
-    overflow-y: auto;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    gap: 2rem;
   }
 
   .navbarLinks.active {
-    display: flex;
+    transform: translateY(0);
   }
 
   .menuContainer {

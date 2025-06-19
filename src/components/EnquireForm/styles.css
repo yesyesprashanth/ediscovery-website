@@ -1,31 +1,28 @@
 .enquire-overlay {
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
   backdrop-filter: blur(4px);
-  z-index: 9998;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
 }
 
 .enquire-modal {
   position: fixed;
-  left: 200px;
-  top: 50px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: white;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
+  max-width: 600px;
   width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
-  text-align: center;
+  z-index: 1001;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
@@ -34,7 +31,7 @@
   right: 1rem;
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #666;
   cursor: pointer;
   padding: 0.5rem;
@@ -49,14 +46,15 @@
 }
 
 .form-title {
-  font-size: 1.75rem;
+  font-size: 1.875rem;
   font-weight: 600;
-  color: #1f2937;
+  color: #333;
   margin-bottom: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 .form-subtitle {
+  text-align: center;
   color: #666;
   margin-bottom: 2rem;
 }
@@ -65,61 +63,82 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  text-align: left;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .form-group label {
-  font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: #333;
+  font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group textarea {
-  padding: 0.75rem;
-  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: #333;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #66CDAA;
-  box-shadow: 0 0 0 3px rgba(102, 205, 170, 0.1);
+  box-shadow: 0 0 0 2px rgba(102, 205, 170, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff4444;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
 }
 
 .submit-button {
   background-color: #66CDAA;
   color: white;
-  padding: 0.875rem 1.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 6px;
-  font-weight: 500;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
 .submit-button:hover {
-  background-color: #53b491;
-  transform: translateY(-1px);
+  background-color: #4fa88a;
 }
 
-.submit-button:active {
-  transform: translateY(0);
+@media (max-width: 480px) {
+  .enquire-modal {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.625rem 0.875rem;
+  }
 }
