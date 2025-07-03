@@ -1,0 +1,119 @@
+'use client';
+
+import React from 'react';
+import { productsMenu, productDetails } from '@/data/menudata';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Image from 'next/image';
+import styles from './styles.module.css';
+
+export default function ProductPage({ params }) {
+  // Find the menu item that matches this URL
+  const menuItem = Object.values(productsMenu)
+    .flatMap(category => category.products)
+    .find(product => {
+      const urlForm = product.toLowerCase().replace(/[:\s,]+/g, '-');
+      return urlForm === params.product;
+    });
+  
+  // Get the product details using our mapping
+  const product = menuItem ? productDetails[menuItem] : null;
+
+  // Debug logging
+  console.log('Product Debug:', {
+    urlSlug: params.product,
+    foundMenuItem: menuItem,
+    productData: product,
+    availableProducts: Object.keys(productDetails),
+  });
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
+  return (
+    <div className={styles.pageContainer}>
+      <Navbar />
+      <main className={styles.main}>
+        <div className={styles.productDetailsContainer}>
+          <h1 className={styles.heading}>{product.fullContent.heading || product.fullContent.mainHeading}</h1>
+          
+          {product.fullContent.sets ? (
+            // For products with multiple sections
+            product.fullContent.sets.map((set, index) => (
+              <div key={index} className={styles.contentSection}>
+                <h2 className={styles.subHeading}>{set.heading}</h2>
+                <div className={styles.textContent}>
+                  <p className={styles.paragraph}>{set.paragraph}</p>
+                  {set.subHeading && (
+                    <>
+                      <h3 className={styles.listHeading}>{set.subHeading}</h3>
+                      <ul className={styles.specList}>
+                        {set.list.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={set.image}
+                    alt={set.heading}
+                    fill={true}
+                    priority={true}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: 'contain' }}
+                    className={styles.image}
+                  />
+                </div>
+              </div>
+            ))
+          ) : (
+            // For products with simple structure
+            <div className={styles.contentSection}>
+              <div className={styles.textContent}>
+                <p className={styles.paragraph}>
+                  {product.fullContent.paragraph}
+                </p>
+                {product.fullContent.subHeading && (
+                  <>
+                    <h3 className={styles.listHeading}>{product.fullContent.subHeading}</h3>
+                    <ul className={styles.specList}>
+                      {product.fullContent.list.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+              <div className={styles.imageContainer}>
+                <Image
+                  src={product.fullContent.image}
+                  alt={product.fullContent.heading || product.fullContent.mainHeading}
+                  fill={true}
+                  priority={true}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'contain' }}
+                  className={styles.image}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </main>
+      <Footer />
+                    <span className={styles.specText}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </main>
+      
+      <div className={styles.footerSpacer}></div>
+      <Footer />
+    </div>
+  );
+}

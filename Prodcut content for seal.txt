@@ -1,0 +1,165 @@
+Here the logic is differenct again
+Sub menu: Auto Analyser AA500
+Heading1: Auto Analyser AA500
+paragraph: The AA500 is the top-of-the-line AutoAnalyzer incorporating the latest innovations to deliver your laboratory the freedom of total automation while achieving very high precision and the lowest detections levels. The AA500 is the AutoAnalyzer you’ve been waiting for- total automation, ultralow detection, multitest chemistries, high throughput.
+Heading2: Innovation and Intelligent Technologies
+paragrph: The SEAL AA500 AutoAnalyzer gives you total automation-just program and leave! Designed by our chemists for chemists.
+Points:     
+    Ultra-low detection limits
+    Total automatic startup & shutdown including automated platen engage and release, self-wash,  auto standards and dilution
+    Easy reagent management with auto-level sensing
+    Multi-test manifolds for different nutrients with no hardware changes
+    New, all-in-one housing design is both compact and modular
+    Easy to upgrade
+
+Heading3: The AutoAnalyzer Designed for Environmental Analysis
+Paragraph: The SEAL AA500 AutoAnalyzer incorporates features exclusive to SEAL AutoAnalyzers, and is designed specifically for environmental applications, making it ideal for analyzing nutrients in water, wastewater, seawater, soil, fertilizer and plant extracts.
+
+Heading4 :Feature Packed Top-of-the-Line AutoAnalyzer
+Points:     Uses Segmented Flow Analysis principles to reduce inter-sample dispersion
+    All-in-one housing uses modular components to deliver a compact analyzer with more organization and more powerful control
+    Uses less bench space
+    System modules can be standalone or used to replace AA3 modules
+    Full software control, including automatic platen engage and release
+    High reproducibility
+    Low reagent consumption
+    Ultralow detection limits
+    High Resolution (HR) Digital Photometers standard
+    Stable LED light source
+    Glass coils: chemically inert and easy visual checks
+    Over 700 documented applications, including USEPA, ISO and ASTM standard methods
+    Quick method change over
+    Wide range: dilution of sample rarely necessary
+    Same wavelength referencing in real time
+    Multitest manifolds
+    Dual range multitest methods for high and low ranges
+    Cadmium column switching valves
+    No adjustment required after lamp or flowcell replacement
+    Multispeed peristaltic pumps
+    Add samples after run has started
+image: AA500_autoanalyzer.png
+
+Submenu: Auto Analyser QuAAtro39​
+Main Heading: Auto Analyser QuAAtro39​
+Heading1: QuAAtro39 Continuous Segmented Flow Analyzer
+Paragrapph: QuAAtro39 is the world’s most automated, compact, Continuous Segmented Flow Analyzer. With micro or macro flow hydraulics, heated manifolds, high resolution detectors and advanced software this high performance microflow chemistry analyzer is ideal for the detection of ultra-low nutrients in water, wastewater, seawater, soil, plant extracts, tobacco and wine.
+Heading2: Why Choose the QuAAtro39 AutoAnalyzer?
+Points: 
+    Generate more than 500 tests per hour.
+    Ultra-low detection limits.
+    High reproducibility.
+    Increases productivity by 33% over its predecessor.
+    Micro or macroflow hydraulics enable high sample rates (internal diameter of glassware is 1 or 2mm).
+    Low sample consumption
+    Low reagent consumption
+    One-click start up.
+    Automatic performance checks, before, during and after a run.
+    Automatic monitoring of noise, drift, bubble pattern and light energy
+    Automatic and complete shutdown with automatic pump platen release (option)
+    5+ simultaneous chemistries from one console.
+    Also available as a 5 channel seawater analyzer.
+    High-resolution digital photometer provides higher sensitivity.
+    LED light source.
+    Integrated enclosed manifold and detector (heated to 37 + degrees C)
+    Optimal bubble frequency programmed by silent air valves.
+    Reliable unattended operation & overnight running.
+    Multitest manifolds for different nutrients with no hardware changes.
+    Glass components for easy cleaning & easy visual checks.
+    Uses Continuous Segmented Flow Analyzer principles to reduce inter-sample dispersion.
+    Compact and flexible chemistry analyzer.
+    Easy to transport.
+
+Heading3: QuAAtro Methods
+Paragraph: SEAL Analytical has more than 1,000 documented Continuous Flow Analyzer methods, with new applications regularly being developed in our laboratories. USEPA, ASTM, ISO, AOAC, DIN and other international regulatory compliant methods available.
+
+Heading4: How Does the QuAAtro39 AutoAnalyzer Work?
+Paragraph: The QuAAtro39 AutoAnalyzer is the very latest generation of the original world-class Technicon Continuous Segmented Flow Analyzer (SFA). QuAAtro39 AutoAnalyzer is now even more flexible and with 33% more capacity over its predecessor, further improving laboratory efficiency.
+
+A basic Continuous Segmented Flow Analyzer consists of an AutoSampler, a peristaltic pump, a chemistry manifold, a detector and data acquisition software. Samples and reagents are pumped continuously through the chemistry manifold. Air bubbles are introduced at regular intervals forming unique reaction segments, which are mixed using glass coils. Glass is ideal, as it is inert, stays clean and enables easy visual checks.
+
+In Continuous Segmented Flow Analyzers reactions run to completion, and the ratio of sample to reagents in the detector reaches a constant maximum value. This results in ultra-low detection limits and exceptional reproducibility. Variations in reaction time, temperature, and sample matrix do not affect the results as they do in other colorimetric techniques, such as Flow Injection Analysis, where the reaction is not brought to completion.
+
+image: quatro.png
+
+sub menu :AQ400 Discrete Analyzer
+Main heading: AQ400 Discrete Analyzer
+heading1: AQ400 Discrete Analyzer
+Paragraph: Brings increased speed, capacity, flexibility and reproducibility to your analysis.
+
+Your environmental analytical chemistry has just got easier with the SEAL AQ400 Discrete Analyzer . This compact, bench-top analyzer has been designed by chemists to address the needs of environmental laboratories requiring high levels of automation, a wide range of chemistries, limits of detection that ensure compliance with regulatory requirements and integration with LIMS systems. Like the other Discrete Analyzers in the SEAL range, the AQ400 will give you the best analysis and eliminate problems inherent in analyzers designed for clinical use. SEAL Analytical has the largest installed base of Discrete Analyzers in the USA and we continue to develop the software and hardware for the specific needs of environmental samples.
+
+
+Heading2: Why Select the AQ400 Discrete Analyzer for Your Environmental Analytical Chemistry?
+Paragraph: The AQ400 gives you:
+Points:
+    The ability to use as a standalone spectrophotometer – ideal for COD.
+    Very high capacity.
+    Silent operation.
+    Advanced robotics for faster sample preparation/ hour.
+    No carry-over or cross contamination.
+    EPA recommended optically pure and inert glass cuvette.
+    Optional longer path length. Standard 1cm path length.
+    Lower detection limits.
+    Easy maintenance & easy change syringe 
+    Cooled and non-cooled reagent positions
+    Prepares up to 10 working standards for the calibration curve.
+    The chemical reaction is brought to full completion emulating manual and segmented flow methods.
+    Ultra low reagent consumption.
+    Add samples after a run has started.
+    Tests programmable per sample to reduce analysis time.
+    Completely unattended operation ideal for overnight-programed runs.
+    Methods have USEPA approval for both wastewater and drinking water.
+    UKAS methods equivalent to “UK Blue Book”
+
+images:AQ400DiscreteAnalyser.png
+
+submenu: AQ300 Discrete Analyzer
+main heading: AQ300 Discrete Analyzer
+paragraph: With the addition of the AQ300 Discrete Analyzer to the SEAL Analytical nutrient analyzer family there is now a nutrient analyzer for every size laboratory and budget. The AQ300 Discrete Analyzer brings all the same benefits as the AQ400 Discrete Analyzer, but with a smaller footprint and lower sample throughput- ideal for laboratories with less space or smaller workloads. Designed specifically for nutrient analysis on environmental samples, it is perfect for immediate results on many different parameters from the same sample. In the AQ300 all samples are read in exactly the same way in an optical glass cuvette, giving you the best reproducibility, the lowest detection limits and a unique design that ensures no cross contamination even when ammonia, nitrate with cadmium reduction and phenol are run together. Designed specifically for environmental samples, with no compromise.
+
+Heading: Why Choose the AQ300 for Your Nutrient Analysis?
+Points:     A compact Discrete Analyzer, the latest analyzer in the AQ series, faster than the AQ1, with higher throughput, 20% more reaction wells, up to 97 sample positions.
+    10mm path length for maximum sensitivity
+    Best reproducibility
+    Lowest detection limits
+    Economical- save money on reagent and waste costs, with less than 50ul waste per sample,
+    Run up to seven different chemistries from each sample in the same run.
+    Auto standard preparation
+    Auto dilution
+    Automatic method changeover
+    Carry over and cross contamination eliminated
+    Completely unattended operation ideal for overnight-programed runs.
+    Scheduling of up to 14 simultaneous chemistries
+    1.2ml or 2ml sample cup sizes
+    9 filter positions 350-880nm
+    Reagent level sensing (optional)
+    Compact Discrete Analyzer designed specifically for the nutrient analysis needs of environmental laboratories
+    Methods have USEPA approval for both wastewater and drinking water.
+    UKAS methods are equivalent to “UK Blue Book”
+    Methods specially optimized for soil analysis.
+images: AQ300-Discrete-Analyser.png
+
+sub menu : Block Digester
+Heading BD50s and BD28s
+Paragraph: 
+
+Improved digestions for better analysis
+
+The BD50s and BD28s Programmable Digestion Systems perform acid digestion of large numbers of samples under controlled conditions and is available in two different formats:
+
+    28 place for 250ml digestion tubes
+    50 place for both 75ml and 100ml digestion tubes
+
+Designed for durability and robustness, a BD50s/BD28s digestion system includes a block digestion unit, microprocessor controller, tube rack/draftshield, a set of digestion vessels and a cooling stand that supports the tube rack above the block.
+
+The BD50s and BD28s Digestion Systems heat samples at a controlled rate, in the presence of one or more acids, to the required temperature then holds the samples at that temperature until digestion is complete.
+
+The BD50s and BD28s’ unique flat plate design results in an even temperature distribution across the block and more precise temperature control. The temperature of each digestion position in the BD50s and BD28s is tightly regulated ensuring all samples in the batch are digested equally.
+
+In addition, your digestion methods are stored electronically to provide reproducibility from batch-to-batch, operator-to-operator. You can store up to 20 programs, each with up to 30 steps, allowing you to automate the most complex digestion procedure.
+
+images: Block_digester.png
+
+
+
+

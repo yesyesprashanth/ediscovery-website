@@ -1,0 +1,300 @@
+Submenu: Lissy Liquid Handling System
+
+Heading: LISSY Liquid Handling System
+
+Paragraph: Sample preparation for analysis types, sample dissolution, serial dissolution, reformatting steps can be fully automated with our flexible liquid handling system, LISSY. Many applications demand a diversity in pipetting probes in a single run – probes for septum piercing to avoid evaporation, for sample filtration form the top; disposable tips for contamination-free pipetting, for handling corrosive reagents, for ion-free dispensing, spotting of reagents, spraying in defines angles.
+
+Sub Heading: Specifications
+List
+    • Workbench from 90 up to 200 cm
+    • One or two arms
+    • 1 to 16 pipetting probes
+    • High working speed
+    • Integrated gripper optional
+    • Variety of pipetting probes
+    • Tracking and visualising samples
+    • pH-Adjustment and Measurement
+    • Capping and De-capping
+    • Viscous media dispensing
+    • Heating/cooling
+    • Stirring
+Image: Yes
+
+
+Heading:  CRISSY Salt Pre-Screening & Polymorph Screening
+
+Paragraph: Polymorphism has become a serious concern in today’s pharmaceutical research as it affects a number of issues in pharmaceutical systems varying from processing characteristics & shelf life, to bioavailability. To reduce “surprises” and secure potential product patents, polymorph screening is considered at a very early stage in the drug discovery process. At this stage, since a large number of candidates with very small sample volumes have to be tested, only an automated system could cope with the requirements. Zinsser Analytic developed CRISSY®, an automatic workbench for salt pre-screening and polymorph screening studies.
+
+Sub Heading: Specifiaction
+List
+        ◦ Experimental planning
+        ◦ Precise gravimetrically controlled distribution of API
+        ◦ Liquid handling of solvent arrays
+        ◦ Controlled heating and cooling cycles
+        ◦ pH measurement and adjustment
+        ◦ Special blocks for direct analysis without any additional sampling steps
+        ◦ Customised import and export functions
+
+Sub menu: 
+Main Heading: Powder Dispensing
+
+Heading 1: REDI & LIPOS Powder & Liquid Handling
+Paragraph: REDI and LIPOS are automation platforms for the precise distribution of solids such as resins, beads, crystals, salts, nanoparticles, extrudates, seeds, ground plant material, lactose, aerosil, chemical compounds from libraries, etc. For both systems, innovative technologies have been developed to overcome the challenges associated with solid handling due to the properties of individual powders – particle size, particle size distribution, density, electric charge, etc. In addition, further functionality is available with LIPOS which is also equipped with liquid handling, allowing solid dissolution and many other methodologies to be carried out on the same platform with the inclusion of suitable modules.
+ 
+Sub heading: Specification
+List
+    • From 0.5/1mg to 1g (with a different technology up to 100g)
+    • Distributions 1 to many or 1 to 1
+    • Free choice of source and destination containers
+    • Gravimetric or volumetric dispensing
+    • Solutions for static or hygroscopic powders
+    • Fixed volume or variable volume dispensing
+    • Optional capping/decapping, vortexing, heating, cooling, etc.
+Image: Yes
+
+
+Heading 2: DryPette® Hand Held Manual Powder Dispensing System
+Paragraph:  The DryPette® is a hand held powder pipette that accurately dispenses solids, comprising a dispensing handle and a controller unit. The handles can be easily exchanged. Powder is drawn into the pipette tip in the handle under vacuum, and then expelled under light positive pressure (DryPette® Standard and Dry- Pette® Plus), or light positive pressure with or without positive displacement (DryPette® Varix range).
+
+Sub heading: Specifiaction
+List
+    • Precise and reproducible
+DryPette® is precise and reproducible with precision being maintained by the removal of the excess powder from the bottom of the tip after aspiration (50mg +/- 2mg; 150mg +/- 1mg; 1000mg +/- 2.5mg).
+    • No Cross contamination
+A rapidly exchangeable, low cost, cellulose filter is incorporated in the delivery line of the pipette, to avoid any risk of cross contamination.
+    • Lightweight
+The ergonomically designed hand piece allows easy and fatigue free filling of vessels. The hand piece is run from a compact control unit connected via a flexible vacuum pipe.
+    • Flexible
+Multiple handle sizes can be used with a single DryPette® controller unit to cover a wide dispense weight range, providing an economic, versatile powder dispensing system for your laboratory. Custom designed DryPette® nozzles and PickFix tips can also be supplied to order.
+    • Simple
+The pipette is simply operated via a three-position switch (fill – off – dispense) on the hand piece
+
+Image: yes
+
+Sub menu: Automatic Vial Filler
+Main Heading: Automatic Vial Filler
+
+Heading1 : TARIS weighing, Dosing and Dissolving
+Paragraph: Taris is a low cost system for taring and weighing of vials with the option of decapping and capping. The system is designed for batches of 100 to 200 vials per loading. The processing time is about 1 minute per vial (including screwing the caps off and on again). The system can run completely unattended. It produces a file with the weights and a log file of the complete run. An optional barcode reader can check the barcode while the vials are decapped and capped.
+Specification
+    • Capping and Decapping of vials.
+    • Taring and weighing vials with or without caps.
+    • Can handle various vial sizes.
+    • Barcode reading optional.
+    • Weight list as Excel-File.
+
+Image: Yes Taris.jpg
+
+Heading2 : TraySy & TraySy Plus xxx
+Paragraphy: TraySy “X” a newly developed X-Y distributor and the proven peristaltic dispenser Perifill® IQ 3000 form a unique automatic filling system for small and medium size batches. TraySy “X” is a fast, computer controlled precision X,Y-system with a stainless steel workbench. Vials, ampoules, tubes in racks or packing trays can be placed on the workbench and automatically filled. It takes less than 2 seconds to fill a 4ml vial. The systems are used for sterile and non-sterile serial dispensing in drug dispensories, bacteriology labs, pharmaceutical and diagnostic batch production.
+Specification
+    • Two speed recycling to reservoir when not dispensing
+    • Stirring for slurries and suspensions
+    • Accurate temperature control for hot or cold liquids
+    • Fast or slow dispensing
+    • Full control for viscous materials
+    • Programmable slow start and slow finish – no splashing
+    • Stores 9 user defined programmes
+    • Volume range 0.1 ml to 1000 ml
+    • Dispense and calibration setting retained in memory when switched off
+    • Easy calibration
+    • Easy to clean
+Image: Yes, traysy.jpg
+
+
+Sub menu: Blending System for viscous media​
+Heading: Blending System for viscous media​
+
+Paragraph: The Blending Station BLENDA is designed for the preparation of complex blends of viscous media. Specially designed pumps, liquid delivery tools and powerful software allow high throughput blending without compromise in precision or accuracy.
+Specification
+    • Precise gravimetrically controlled distribution of all components
+    • Liquid handling of solvent arrays
+    • Variable volume precision powder dispensing pipette
+    • Viscous media dispenser
+    • Temperature control
+    • Mixing and stirring
+    • Capping and De-capping
+    • Integrated viscosity meter for viscosity measurement & adjustment
+    • Additional modules such as solid handling,liquid handling, pH-measurement, etc.can be integrated
+Image: yes, Blenda.jpg
+
+Sub menu: Formulation Design & Development
+
+Heading: Formula X Formulation Design & Development
+
+Paragraph: Formula X® has been developed as an automation platform for the design and development of formulations for a variety of industries – pharmaceutical, chemical, petrochemical, personal hygiene and cosmetic. The system can handle highly viscous media using a variety of newly developed, patented hardware with both precision and accuracy. Formula X® can also dispense solid materials and, when used in conjunction with an integrated balance, both liquids and solids can be gravimetrically dispensed to a set target under full software control.
+ 
+Specifications
+    • Precise gravimetrically controlled distribution of all components
+    • Liquid handling of solvent arrays
+    • Variable volume precision powder dispensing pipette
+    • Viscous media dispenser
+    • Temperature control
+    • Mixing and stirring
+    • Capping and De-capping
+    • Integrated viscosity meter for viscosity measurement & adjustment
+
+Image : formulaX.jpg
+
+Sub Menu: Pelletising Grainding and Siewing
+Heading: Sieving & Grinding Stand-alone Units
+
+Heading1 :Grinding Station
+The grinding station crushes pellets or extrudates in semi-micro ball mills. 4 samples can be processed in parallel. To prevent contamination disposable grinding vessels and balls are used.
+The samples can either be collected directly from the pelletising system or they can be filled in manually. On the stand-alone grinding station the timing is set on the integrated timer.
+
+Images: G, rinding-station1.png, Grinding-station2.png, Grinding-station3.png
+
+Heading2: Sieving Station
+To select the powders in a defined particle range, the samples are sieved. Up to 3 particle sizes can be selected per run. 4 samples can be processed in parallel.
+The sieves are made from stainless steel and can be easily cleaned in a sonication bath. Different sieve sizes are available, customised sieve sizes are available on request.
+
+Images: Sieving1.jpg, Sieving2.jpg
+
+Submenu: Pesticide Residue Analysis
+
+Heading: LISSY - Automation platform for QuEChERS
+
+Paragraph: As its name suggests, the QuEChERS method (Quick, Easy, Cheap, Effective, Rugged, and Safe) has caused a breakthrough in pesticide residue analysis in the food sector. The QuEChERS method can be taken to a further level with the fully automated liquid handling platform “LISSY” from Zinsser Analytic. LISSY automates all the required steps for sample analysis – weighing in the sample, the precise and reproducible addition and mixing of solvents and reagents, and centrifugation if required. LISSY therefore provides a rapid and error free automated solution for the analysis of pesticide residues in samples using QuEChERS.
+Specification
+    • Precise Liquid handling
+    • Precise and Reproducible Powder Dosage
+    • Efficient Mixing
+    • Integrated Centrifuge
+    • Optional pH-measurement and Adjustment
+    • Optional Purification by SPE
+Image: QuEChERS.jpg
+
+Sub menu: Plate Reformatting
+
+Heading:  Plate Reformatting
+
+Heading1: ProForma Reformatting, Reorganising & Taring
+
+Paragraph:  proForma is the working horse for the compound storage department, where sub-samples from compounds need to be put together, library samples need to be weighed and reweighed.
+
+Specification
+    • Reformatting by liquid handling from vials to plates (96 or 384)
+    • Reorganising & Cherry Picking by liquid handling or by moving vials or tubes, by user-defined sorting criteria
+    • Including capper-decapper with barcode reading
+    • Taring of vials
+    • Flexible labware
+    • All data is stored in the database and can be exported to different file formats.
+Image: reformatter1.jpg
+
+Heading2: MOSS 2002 Weighing, Dissolving & Plate Preparation
+paragraph: With MOSS, the Modular Sample Preparation System, ZINSSER ANALYTIC has bridged the gap between huge library stores of hundreds of thousands of library compounds, and High Throughput Screening laboratories.
+It ergonomically combines modern weighing technology and sophisticated software to automate assay and storage plate preparation. The compact design, its high throughput, reliability and its easy integration into the existing infrastructures has made it the system of choice for high throughput testing laboratories.
+ 
+Specification
+    • Dissolution of library samples
+    • Preparation of mother, daughter and test plates
+    • Complete barcode tracking throughout the whole process
+    • User friendly WINDOWS®-2000/XP Professional software with data import and export functions, direct access on ORACLE® or other data bases
+
+Image: Moss.jpg
+
+Submenu: Polymorphism and Salt Screening
+
+Heading: CRISSY Salt Pre-Screening & Polymorph Screening
+Paragraph: Polymorphism has become a serious concern in today’s pharmaceutical research as it affects a number of issues in pharmaceutical systems varying from processing characteristics & shelf life, to bioavailability. To reduce “surprises” and secure potential product patents, polymorph screening is considered at a very early stage in the drug discovery process. At this stage, since a large number of candidates with very small sample volumes have to be tested, only an automated system could cope with the requirements. Zinsser Analytic developed CRISSY®, an automatic workbench for salt pre-screening and polymorph screening studies.
+ 
+Specifiaction
+        ◦ Experimental planning
+        ◦ Precise gravimetrically controlled distribution of API
+        ◦ Liquid handling of solvent arrays
+        ◦ Controlled heating and cooling cycles
+        ◦ pH measurement and adjustment
+        ◦ Special blocks for direct analysis without any additional sampling steps
+        ◦ Customised import and export functions
+Image: CRISSY.jpg
+
+
+Submenu: Pre Formulation & Solubility studies
+
+Heading: SuSy Pre-Formulation & Solubility Studies
+
+Paragraph: SuSy is a new automatic workbench which enables you to execute a workflow to test a large number of compounds in parallel.
+Specification
+    • Precise weighing of the APIs into the reactors
+    • Temperature controlled vortexers or magnetic stirrers
+    • Automatic sealing of the reactors to prevent evaporation
+    • pH-measurement and adjustment
+    • Camera tool for the analysis of dissolution status
+    • Sonication
+    • Integration of evaporation, filtration and HPLC/LC-MS preparation
+    • Samples for analysis can be taken at any time
+
+Image: susy.jpg
+
+Submenu: Protein Crystallization Systems
+
+Heading: Protein Crystallization Systems
+
+heading1: ProCrys HT System for Protein Crystallisation
+Paragraph: ProCrys 2002 is a turnkey and complete solution for protein crystallisation, the preparation of screening solutions from stock solutions, transfer of screening solutions to mother plates (usually deepwell plates), filling of crystallisation plates with screening solution and proteins, sealing of mother and crystallisation plates with adhesive sealer to prevent evaporation
+ 
+Specification
+    • Fast & optimised pipetting of screening solutions of with intelligent sorting software, which can use either volume or concentration
+    • High precision liquid handling of screening solutions of varying viscosities as well as proteins
+    • Rapid ‘on the fly’ dispensing of of diluted solutions minimises contamination
+    • Reliable level detection in containers sealed with septa to minimise contamination of liquid handling probes
+    • Adhesive sealing to minimise the risk of evaporation
+    • Thorough ultrasonic washing of liquid handling probes at different temperatures
+    • Superior data communication for fast pipetting
+    • Flexible System which can handle all commonly used lab ware (e.g. tubes & plates)
+    • Full barcode control
+image: ProCrys2002.jpg
+
+Heading2: ProCrys Meso Automation Platform for Membrane Proteins
+
+Paragraph: ProCrys Meso is the new liquid handling platform for the preparation of 96 in-meso (or cubic phase) proteins.
+Specifications
+    • 1 meter liquid handling platform with 2 pipetting arms
+    • Accurate and precise dispensing of the protein and the screening solution
+    • Preparation of own screening solutions on the workbench
+    • An integrated module ensures the ideal humidity conditions for the process
+    • Precise and reproducible dispensing of the mesophase
+    • Positioning of the protein is controlled by a high precision laser
+    • The Sensor controlled shape and travel length of the needle of the protein dispenser
+    • Software automatically adjusts the coordinates of dispense hight and position in the well to the reading of the laser and needle sensors
+    • WinProCrys software allows maximum flexibility of method development
+    • Work lists can be imported from Excel® or the customer’s LIMS system
+submenu: Synthesis: Liquid and Solid phase, Catalysis, Peptide
+Heading1: SOPHAS Solid & Solution Phase Synthesiser
+
+The SOPHAS system is an automatic system for synthesis and sample preparation that comprises liquid handling, heating, cooling and mixing functions with many optional tools to aid your synthesis such as powder handling, weighing, microwave-assisted synthesis, sonication and pH measurement & adjustment. Laboratories across the world are experiencing the fantastic flexibility and reliability of the SOPHAS.
+ 
+Specifications
+    • Automates the entire workflow for synthesis and sample preparation
+    • Reactions can be performed under inert conditions
+    • Filtration probes allow the use of scavenger resins and solid supported reagents
+    • Optional tools allow complete customisation to fit into your processes
+    • Modular setup, expandable additional modules can be added
+    • Performs various synthesis strategies (catalyst synthesis, cascade synthesis,polymer assisted synthesis, peptide synthesis, solid and solution phase synthesis, etc.) on one platform
+images: sophas.jpg
+
+Heading2: SOPHAS CAT Automated System For Catalyst Synthesis
+paragrpah: The SOPHAS system is an automatic system for synthesis and sample preparation that comprises liquid handling, heating, cooling and mixing functions with many optional tools to aid your synthesis such as powder handling, weighing, microwave-assisted synthesis, sonication and pH measurement & adjustment. Laboratories across the world are experiencing the fantastic flexibility and reliability of the SOPHAS.
+ 
+Specifications
+    • Automates the entire workflow for synthesis and sample preparation
+    • Reactions can be performed under inert conditions
+    • Filtration probes allow the use of scavenger resins and solid supported reagents
+    • Optional tools allow complete customisation to fit into your processes
+    • Modular setup, expandable additional modules can be added
+    • Performs various synthesis strategies (catalyst synthesis, cascade synthesis, polymer assisted synthesis, peptide synthesis, solid and solution phase synthesis, etc.) on one platform
+
+image: sophascat.jpg
+
+Heading3: SOPHAS CAT HT for HT Experimentation in Catalyst Synthesis
+
+Paragraph: The SOPHAS CAT system is an automatic system for synthesis and sample preparation that comprises liquid handling, heating, cooling and mixing functions with many optional tools to aid your synthesis such as powder handling, weighing, microwave-assisted synthesis, sonication and pH measurement & adjustment. Laboratories across the world are experiencing the fantastic flexibility and reliability of the SOPHAS CAT.
+Specification
+    • Automates the entire workflow forimpregnation and co-precipitation
+    • Integrated calcination, sieving, grinding & pelletising
+    • Filtration probes allow washing of precipate
+    • Optional tools allow complete customisation to fit into your processes
+    • Modular setup ensures the system is expandable and additional modules can be added easily
+    • Performs various synthesis strategies besides catalyst synthesis (e.g. cascade synthesis, polymer assisted synthesis, peptide synthesis, solid and solution phase synthesis, etc.) on one platform
+images: SOPHASCATHT.jpg

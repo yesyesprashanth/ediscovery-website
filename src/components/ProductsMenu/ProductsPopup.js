@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -9,30 +9,29 @@ import styles from './styles.module.css';
 
 const ProductsPopup = ({ isOpen, onClose, parentRef }) => {
   const router = useRouter();
-  const [selectedCategory, setSelectedCategory] = useState(Object.keys(productsMenu)[0]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const updatePreview = (product) => {
-    // Find preview content in the nested structure using selected category
-    const previewContent = productDetails[selectedCategory]?.[product]?.previewContent;
-    if (previewContent) {
-      const previewEl = document.querySelector(`.${styles.preview}`);
-      if (previewEl) {
-        const imageEl = previewEl.querySelector('img');
-        const titleEl = previewEl.querySelector(`.${styles.previewTitle}`);
-        const descEl = previewEl.querySelector(`.${styles.previewDesc}`);
-        const featuresEl = previewEl.querySelector(`.${styles.keyFeatures}`);
+  const categoryKeys = Object.keys(productsMenu);
+  const [selectedCategory, setSelectedCategory] = useState(categoryKeys[0]);
+  const [selectedProduct, setSelectedProduct] = useState(
+    productsMenu[categoryKeys[0]]?.products[0] || null
+  );
 
-        if (imageEl) imageEl.src = previewContent.image;
-        if (titleEl) titleEl.textContent = product;
-        if (descEl) descEl.textContent = previewContent.shortDescription;
-        if (featuresEl) {
-          featuresEl.innerHTML = previewContent.keyFeatures
-            .map(feature => `<li class="${styles.keyFeaturesList}">${feature}</li>`)
-            .join('');
-        }
-      }
+  // When popup opens, select first category and its first product
+  useEffect(() => {
+    if (isOpen) {
+      setSelectedCategory(categoryKeys[0]);
+      setSelectedProduct(productsMenu[categoryKeys[0]]?.products[0] || null);
     }
-    setSelectedProduct(product); // Still update state but won't trigger re-render
+  }, [isOpen]);
+
+  // When category changes, select its first product
+  useEffect(() => {
+    if (isOpen && selectedCategory) {
+      setSelectedProduct(productsMenu[selectedCategory]?.products[0] || null);
+    }
+  }, [selectedCategory, isOpen]);
+
+  const updatePreview = (product) => {
+    setSelectedProduct(product);
   };
 
   const handleKnowMore = () => {
@@ -91,10 +90,7 @@ const ProductsPopup = ({ isOpen, onClose, parentRef }) => {
                   <button
                     key={category}
                     className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
-                    onClick={() => {
-                      setSelectedCategory(category);
-                      setSelectedProduct(null);
-                    }}
+                    onClick={() => setSelectedCategory(category)}
                   >
                     {category}
                   </button>

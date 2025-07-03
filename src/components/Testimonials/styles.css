@@ -38,6 +38,19 @@
   margin: 0 auto;
 }
 
+.customer-logos-grid.no-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem 3rem;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem 0;
+  background: none;
+  box-shadow: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .logo-container {
   width: 200px;
   height: 100px;
@@ -51,6 +64,19 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+}
+
+.logo-no-card {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: none;
 }
 
 .logo-container::before {
@@ -94,9 +120,24 @@
     gap: 2rem;
   }
 
+  .customer-logos-grid.no-card {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
   .logo-container {
     width: 150px;
     height: 80px;
+  }
+
+  .logo-no-card {
+    width: 120px;
+    height: 70px;
+  }
+
+  .customer-logo {
+    width: 100px !important;
+    height: 50px !important;
   }
 }
 

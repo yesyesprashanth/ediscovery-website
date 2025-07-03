@@ -42,8 +42,9 @@ const Testimonials = () => {
           <p>Trusted by leading companies across industries</p>
         </motion.div>
 
+        {/* Remove card, display only logos in a larger grid */}
         <motion.div 
-          className="customer-logos-grid"
+          className="customer-logos-grid no-card"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,7 +53,7 @@ const Testimonials = () => {
           {customerLogos.map((logo, index) => (
             <motion.div
               key={logo.name}
-              className="logo-container"
+              className="logo-no-card"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -61,8 +62,8 @@ const Testimonials = () => {
               <Image
                 src={logo.src}
                 alt={`${logo.name} logo`}
-                width={150}
-                height={80}
+                width={200}
+                height={120}
                 className="customer-logo"
                 style={{ objectFit: 'contain' }}
               />
