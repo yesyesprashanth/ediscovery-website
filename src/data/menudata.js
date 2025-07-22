@@ -4,6 +4,7 @@ export const productsMenu = {
       "Liquid Handling System",
       "Powder Dispensing",
       "Formulation Design and Development",
+      "Polymorphism and Salt Screening",
       "Pre Formulation and Solubility studies",
       "Synthesis: Liquid and Solid phase, Catalyst, Peptides",
       "Protein crystallization system",
@@ -12,10 +13,10 @@ export const productsMenu = {
       "Pelletising Grinding and Sieving",
       "Pesticide Residue Analysis",
       "Plate Reformatting",
-      "Polymorphism and Salt Screening",
+      
     ]
   },
-  "Segmentedflow Auto Analysers": {
+  "Segmented flow Analysers": {
     products: [
       "Auto Analyser AA500",
       "Auto Analyser QuAAtro39",
@@ -104,7 +105,7 @@ export const productDetails = {
   "Powder Dispensing": {
     previewContent: {
       image: "/assets/products/zinsser/powder-handling.png",
-      shortDescription: "Advanced powder dispensing solutions including REDI, LIPOS platforms and DryPette® handheld system for precise solid material handling.",
+      shortDescription: "Advanced powder dispensing solutions including REDI, LIPOS platforms for precise solid material handling.",
       keyFeatures: [
         "Precise powder distribution",
         "Multiple dispensing options",
@@ -129,19 +130,6 @@ export const productDetails = {
             "Optional capping/decapping, vortexing, heating, cooling, etc."
           ],
           image: "/assets/products/zinsser/powder-handling.png"
-        },
-        {
-          heading: "DryPette® Hand Held Manual Powder Dispensing System",
-          paragraph: "The DryPette® is a hand held powder pipette that accurately dispenses solids, comprising a dispensing handle and a controller unit. The handles can be easily exchanged. Powder is drawn into the pipette tip in the handle under vacuum, and then expelled under light positive pressure.",
-          subHeading: "Specifications",
-          list: [
-            "Precise and reproducible with precision (50mg ±2mg; 150mg ±1mg; 1000mg ±2.5mg)",
-            "No Cross contamination with cellulose filter",
-            "Lightweight ergonomic design",
-            "Multiple handle sizes for wide dispense weight range",
-            "Simple three-position switch operation (fill – off – dispense)"
-          ],
-          image: "/assets/products/zinsser/Drypette.png"
         }
       ]
     }
@@ -1046,7 +1034,7 @@ export const productUrlMapping = {
 
 // Solution details
 export const solutionDetails = {
-  "Fertilier Analysis": {
+  "Fertilizer Analysis": {
     heading: "Fertilizer Analysis Solutions",
     description: "Advanced automated solutions for comprehensive fertilizer analysis, ensuring accurate nutrient content measurement and quality control in fertilizer production.",
     image: "/assets/solutions/seal/soil-testing.jpg"
@@ -1056,7 +1044,7 @@ export const solutionDetails = {
     description: "Specialized analysis solutions for tobacco industry, providing precise measurement of key components and quality parameters in tobacco products.",
     image: "/assets/solutions/seal/water-analysis.jpg"
   },
-  "Plan and Soil Analysis": {
+  "Plant and Soil Analysis": {
     heading: "Plant and Soil Analysis Solutions",
     description: "Comprehensive analysis solutions for agricultural testing, enabling detailed examination of soil properties and plant nutrient content.",
     image: "/assets/solutions/seal/soil-testing.jpg"
@@ -1073,7 +1061,7 @@ export const solutionUrlMapping = {
   "Auto Analysers": {
     "fertilizer-analysis": "Fertilizer Analysis",
     "tobacco-analysis": "Tobacco Analysis",
-    "plant-soil-analysis": "Plan and Soil Analysis",
+    "plant-and-soil-analysis": "Plant and Soil Analysis",
     "water-analysis": "Water Analysis"
   },
   "High Throughput Screening": {
@@ -1089,7 +1077,7 @@ export const solutionUrlMapping = {
 // Solution content mapping (unified mapping for both images and PDFs)
 export const solutionContentMapping = {
   "Auto Analysers": {
-    "Fertilier Analysis": {
+    "Fertilizer Analysis": {
       type: "image",
       path: "/assets/solutions/Seal/Fertilizer-Analysis.png"
     },
@@ -1097,7 +1085,7 @@ export const solutionContentMapping = {
       type: "image",
       path: "/assets/solutions/Seal/Tobacco-Analysis.png"
     },
-    "Plan and Soil Analysis": {
+    "Plant and Soil Analysis": {
       type: "image",
       path: "/assets/solutions/Seal/Soil-Analysis.png"
     },

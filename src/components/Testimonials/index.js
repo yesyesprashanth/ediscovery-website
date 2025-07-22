@@ -24,7 +24,6 @@ const customerLogos = [
   { name: 'TAPI', src: '/assets/testimonials/logos/TAPI.png' },
   { name: 'Cipla', src: '/assets/testimonials/logos/cipla.png' },
   { name: 'NCPOR', src: '/assets/testimonials/logos/ncpor.png' },
-  { name: 'NRI', src: '/assets/testimonials/logos/nri.png' }
 ];
 
 const Testimonials = () => {

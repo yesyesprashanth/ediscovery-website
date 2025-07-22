@@ -48,8 +48,146 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  width: 100%;
-  height: calc(100vh - 100px);
+}
+
+/* New Download Form Styles */
+.solutionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.solutionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.solutionDetails {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solutionHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.solutionDescription {
+  font-size: 1.125rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.downloadSection {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.resourceInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.resourceIcon {
+  flex-shrink: 0;
+}
+
+.fileIcon {
+  width: 3rem;
+  height: 3rem;
+  color: #66CDAA;
+}
+
+.resourceDetails {
+  text-align: left;
+}
+
+.resourceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.resourceType {
+  font-size: 0.875rem;
+  color: #64748b;
+  background: #e2e8f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.downloadPrompt {
+  margin-top: 1.5rem;
+}
+
+.downloadText {
+  font-size: 1.125rem;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #66CDAA;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(102, 205, 170, 0.2);
+}
+
+.downloadButton:hover {
+  background-color: #4fa88a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 205, 170, 0.3);
+}
+
+.downloadIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.errorContainer h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.errorContainer p {
+  font-size: 1.125rem;
+  color: #64748b;
 }
 
 .imageContainer {

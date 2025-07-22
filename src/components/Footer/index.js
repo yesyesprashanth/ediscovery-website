@@ -79,33 +79,21 @@ const Footer = () => {
 
             {/* Address */}
             <div className="contact-item" style={{ position: 'relative' }}>
-              <FaMapMarkerAlt className="contact-icon" />
               <p className="contact-text">
                 No. 3009/2, 2nd Floor,<br />
                 2nd Main, 19th Cross,<br />
                 K.R.Road, Banashankari II Stage<br />
                 Bangalore – 560 070, India
               </p>
-              <a 
-                href="https://maps.app.goo.gl/5C8WFtobtRbhxeE58"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="map-link"
-                aria-label="View on Google Maps"
-              >
-                <div className="map-icon-wrapper">
-                  <FaMapMarkerAlt className="map-icon" />
-                  <div className="pulse-ring"></div>
-                </div>
-              </a>
+              {/* Map link and icon removed */}
             </div>
 
             {/* Business Hours */}
             <div className="contact-item">
               <FaClock className="contact-icon" />
               <p className="contact-text">
-                MON-FRI 09:30 - 17:30<br />
-                SAT 09:30 - 13:00<br />
+                MON-FRI 10:00 - 18:00<br />
+                SAT 10:00 - 13:00<br />
                 SUN HOLIDAY
               </p>
             </div>

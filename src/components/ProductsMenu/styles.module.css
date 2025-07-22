@@ -97,11 +97,16 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: flex-start !important; /* Force left alignment */
+  justify-content: flex-start !important;
 }
 
 .productButton {
-  text-align: left;
-  padding: 0.75rem 1rem;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
   background: none;
   border: none;
   border-radius: 4px;

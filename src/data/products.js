@@ -95,17 +95,6 @@ export const productsData = {
               "Fixed volume or variable volume dispensing",
               "Optional capping/decapping, vortexing, heating, cooling, etc."
             ]
-          },
-          "Manual Powder Dispensing": {
-            image: "/assets/products/zinsser/drypette.jpg",
-            description: "The DryPette® is a hand held powder pipette that accurately dispenses solids, comprising a dispensing handle and a controller unit. The handles can be easily exchanged. Powder is drawn into the pipette tip in the handle under vacuum, and then expelled under light positive pressure.",
-            specifications: [
-              "Precise and reproducible with precision (50mg ±2mg; 150mg ±1mg; 1000mg ±2.5mg)",
-              "No Cross contamination with cellulose filter",
-              "Lightweight ergonomic design",
-              "Multiple handle sizes for wide dispense weight range",
-              "Simple three-position switch operation (fill – off – dispense)"
-            ]
           }
         }
       },
